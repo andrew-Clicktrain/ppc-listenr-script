@@ -213,11 +213,11 @@ function sendEmail(numberOfAlerts) {
 
   if (sendMail) {
 
-    var emailBody =
+    var emailString =
       "Number of changes: " + numberOfAlerts + "\n" +
       "See details: https://docs.google.com/spreadsheets/d/" + spreadsheetId + "\n" + emailBody;
 
-    MailApp.sendEmail(emailAddresses, emailSubject + " | " + accountName, emailBody);
+    MailApp.sendEmail(emailAddresses, emailSubject + " | " + accountName, emailString);
     Logger.log("Sending alert mail");
   }
 }
