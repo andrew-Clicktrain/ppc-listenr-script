@@ -96,7 +96,7 @@ function getChangeAlerts() {
     } catch (e) {
       alert("Issue retrieving results from search API: " + e);
     }
-    var lastResult = ""
+
     while (result.hasNext()) {
       var row = result.next();
       
@@ -125,12 +125,8 @@ function getChangeAlerts() {
           row.changeEvent.changedFields,
         ];
 
-        var thisResult = JSON.stringify( change[2] + change[3] + change[4] + change[5]  )
-        
-        if ( thisResult != lastResult ){
           changeAlerts.push(change)
-          lastResult = thisResult 
-        } 
+      
 
       } catch (e) {
         Logger.log("Issue with parsing results from search API: " + e);
