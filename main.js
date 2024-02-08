@@ -32,7 +32,7 @@ var ignoreUsers = [
 // 'jane@doe.com',
 // 'jill@johns.com'
 // ];
-
+var period = "YESTERDAY";
 var sendMail = true;
 var emailSubject = "PPCListenr - WARNING - Change by person outside of the Agency";
 var emailBody =
@@ -47,7 +47,7 @@ var emailBody =
   "\n" +
   "If there is an alert, an email is sent to:\n" + emailAddresses + "\n";
 
-var period = "YESTERDAY";
+
 
 function main() {
 
